@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#ffffff">
+  <title>Universo del Quilling</title>
+  <meta name="description" content="Impara il Quilling da zero, a casa tua: videolezioni in italiano passo passo, schemi pronti e un percorso su misura per te.">
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <meta property="og:title" content="Universo del Quilling">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:image" content="assets/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/hero.webp">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- UTMify: pixel -->
+  <script>
+    window.pixelId = "6a625a33e8670549128c4fbb";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
+</head>
+<body>
+
+<main class="quiz">
+
+  <header class="quiz-header">
+    <div class="progress" id="progress" hidden>
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+  </header>
+
+  <div class="quiz-body">
+
+    <!-- ============ ETAPA 01 — CAPA ============ -->
+    <section class="step active" data-step="1">
+      <div class="text">
+        <h2>L'ARTE CREATIVA CHE STA SPOPOLANDO NEL 2026:</h2>
+        <h1><span class="hl">QUILLING</span></h1>
+      </div>
+
+      <div class="text">
+        <p>Scopri un modo <strong>semplice</strong> ed <strong>economico</strong> per creare splendide decorazioni in <strong>Quilling</strong> a casa tua, con un passo passo pensato per chi <strong>parte da zero</strong>.</p>
+        <p class="blank"></p>
+      </div>
+
+      <div class="image" style="aspect-ratio: 540 / 675;">
+        <img src="assets/hero.webp" alt="Larissa Nakamura con in mano un quadro in Quilling" width="540" height="675">
+      </div>
+
+      <div class="text">
+        <p>E sai qual è la parte più bella? Ti insegno io, <strong>passo dopo passo</strong>, con i tuoi tempi e con materiali semplici che trovi ovunque.</p>
+        <p>Clicca sul pulsante qui sotto e ricevi il tuo percorso personalizzato!</p>
+        <p class="blank"></p>
+      </div>
+
+      <div class="btn-wrap pulse">
+        <button type="button" class="btn" data-next>VOGLIO IL MIO PERCORSO PERSONALIZZATO</button>
+      </div>
+
+      <div class="space-1"></div>
+
+      <div class="slider quotes" data-slider="quotes">
+        <div class="slider-track">
+          <div class="slide">
+            <div class="quote">
+              <img class="quote-avatar" src="assets/dep-juliana.webp" alt="" width="40" height="40" loading="lazy">
+              <div>
+                <div class="stars" aria-label="5 stelle"></div>
+                <div class="quote-name">Giulia Ferraro · Padova</div>
+                <div class="quote-text">Ho sempre voluto dedicarmi a un lavoro manuale, ma cercavo qualcosa di diverso, ed è così che ho scoperto la filigrana di carta. Oltre a essere rilassantissima, è facilissima, e i lavori vengono semplicemente BELLISSIMI! La adoro!!!</div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="quote">
+              <img class="quote-avatar" src="assets/dep-camila.webp" alt="" width="40" height="40" loading="lazy">
+              <div>
+                <div class="stars" aria-label="5 stelle"></div>
+                <div class="quote-name">Chiara Esposito · Napoli</div>
+                <div class="quote-text">Cercavo qualcosa per arrotondare a fine mese, senza dover spendere tanto. Quando ho scoperto la filigrana di carta ne ho visto subito il potenziale, ed è stata la decisione migliore che abbia mai preso!</div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="quote">
+              <img class="quote-avatar" src="assets/dep-debora.webp" alt="" width="40" height="40" loading="lazy">
+              <div>
+                <div class="stars" aria-label="5 stelle"></div>
+                <div class="quote-name">Daniela Russo · Torino</div>
+                <div class="quote-text">Adoro i lavori manuali, faccio un po' di tutto. Ma per il quilling ho una passione speciale. Ogni pezzo è unico, e non è come certi lavori dove ci metti una vita prima di vedere il risultato. Io in un'oretta finisco qualsiasi pezzo di quilling. Adoro vedere subito il lavoro finito!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ETAPA 02 ============ -->
+    <section class="step" data-step="2">
+      <div class="question">
+        <div class="question-intro">
+          <h3>Per iniziare, dimmi una cosa:</h3>
+          <h2>Qual è il tuo livello di esperienza con il <span class="theme">Quilling?</span></h2>
+        </div>
+        <div class="options" data-name="experiencia">
+          <button type="button" class="option"><span class="option-emoji">🥰</span><span class="option-label">Faccio già qualche lavoro, ma voglio perfezionare la tecnica</span><span class="option-icon arrow"></span></button>
+          <button type="button" class="option"><span class="option-emoji">😅</span><span class="option-label">So fare qualche pezzo semplice, ma voglio imparare di più</span><span class="option-icon arrow"></span></button>
+          <button type="button" class="option"><span class="option-emoji">💌</span><span class="option-label">Non l'ho mai fatto, ma voglio iniziare</span><span class="option-icon arrow"></span></button>
+        </div>
+      </div>
+      <div class="text"><p class="small">Personalizziamo il tuo pacchetto in base alle tue risposte.</p></div>
+    </section>
+
+    <!-- ============ ETAPA 03 ============ -->
+    <section class="step" data-step="3">
+      <div class="question">
+        <div class="question-intro">
+          <h2>Sarà il tuo primo corso di</h2>
+          <h2><span class="theme">Quilling?</span></h2>
+        </div>
+        <div class="options" data-name="primeiro_treinamento">
+          <button type="button" class="option"><span class="option-emoji">🤩</span><span class="option-label">Non ho mai seguito un corso: questo sarà il primo.</span><span class="option-icon arrow"></span></button>
+          <button type="button" class="option"><span class="option-emoji">📖</span><span class="option-label">Ho già seguito un altro corso</span><span class="option-icon arrow"></span></button>
+          <button type="button" class="option"><span class="option-emoji">🎓</span><span class="option-label">Ho già seguito diversi corsi</span><span class="option-icon arrow"></span></button>
+        </div>
+      </div>
+      <div class="text"><p class="small">Personalizziamo il tuo pacchetto in base alle tue risposte.</p></div>
+    </section>
+
+    <!-- ============ ETAPA 04 ============ -->
+    <section class="step" data-step="4">
+      <div class="question">
+        <div class="question-intro">
+          <h2>Quanto tempo hai a disposizione per <span class="theme">imparare</span>?</h2>
+        </div>
+        <div class="options" data-name="tempo">
+          <button type="button" class="option"><span class="option-emoji">🕓</span><span class="option-label">30 minuti - 1 ora</span><span class="option-icon arrow"></span></button>
+          <button type="button" class="option"><span class="option-emoji">🕟</span><span class="option-label">2 - 4 ore</span><span class="option-icon arrow"></span></button>
+          <button type="button" class="option"><span class="option-emoji">🕖</span><span class="option-label">Ho parecchio tempo libero!</span><span class="option-icon arrow"></span></button>
+        </div>
+      </div>
+      <div class="text"><p class="small">Personalizziamo il tuo pacchetto in base alle tue risposte.</p></div>
+    </section>
+
+    <!-- ============ ETAPA 05 ============ -->
+    <section class="step" data-step="5">
+      <div class="question">
+        <div class="question-intro">
+          <h2>Cosa vorresti ottenere, più di tutto, con il <span class="theme">Quilling</span>?</h2>
+        </div>
+        <div class="options" data-name="desejo">
+          <button type="button" class="option"><span class="option-emoji">💵</span><span class="option-label">Lavorare da casa e/o arrotondare con un'entrata extra</span><span class="option-icon arrow"></span></button>
+          <button type="button" class="option"><span class="option-emoji">📈</span><span class="option-label">Avere più libertà e lavorare quando voglio io</span><span class="option-icon arrow"></span></button>
+          <button type="button" class="option"><span class="option-emoji">💰</span><span class="option-label">Dare una mano con le spese di casa e vivere più serena</span><span class="option-icon arrow"></span></button>
+          <button type="button" class="option"><span class="option-emoji">💖</span><span class="option-label">Trovare pace, rilassarmi e avere un momento tutto mio per creare</span><span class="option-icon arrow"></span></button>
+        </div>
+      </div>
+      <div class="text"><p class="small">Personalizziamo il tuo pacchetto in base alle tue risposte.</p></div>
+    </section>
+
+    <!-- ============ ETAPA 06 ============ -->
+    <section class="step" data-step="6">
+      <div class="question">
+        <div class="question-intro">
+          <h2>Una volta imparato a realizzare i tuoi lavori in <span class="theme">Quilling</span>, quale sarà il tuo obiettivo?</h2>
+        </div>
+        <div class="options" data-name="meta">
+          <button type="button" class="option"><span class="option-emoji">💸</span><span class="option-label">Imparare a venderli e guadagnarci di più</span><span class="option-icon arrow"></span></button>
+          <button type="button" class="option"><span class="option-emoji">💌</span><span class="option-label">Farlo solo per hobby</span><span class="option-icon arrow"></span></button>
+          <button type="button" class="option"><span class="option-emoji">💲</span><span class="option-label">Migliorare i risultati della mia attività</span><span class="option-icon arrow"></span></button>
+        </div>
+      </div>
+      <div class="text"><p class="small">Personalizziamo il tuo pacchetto in base alle tue risposte.</p></div>
+    </section>
+
+    <!-- ============ ETAPA 07 — MÚLTIPLA ESCOLHA ============ -->
+    <section class="step" data-step="7">
+      <div class="question">
+        <div class="question-intro">
+          <h2>Che stile di <span class="theme">Quilling </span>ti piacerebbe realizzare?</h2>
+          <p class="muted">Puoi scegliere più di un'opzione</p>
+        </div>
+        <div class="options" data-name="estilo" data-multiple>
+          <button type="button" class="option"><span class="option-emoji">🖼️</span><span class="option-label">Quadretti decorativi</span><span class="option-icon check"></span></button>
+          <button type="button" class="option"><span class="option-emoji">👼</span><span class="option-label">Quadretti sacri e religiosi</span><span class="option-icon check"></span></button>
+          <button type="button" class="option"><span class="option-emoji">🔠</span><span class="option-label">Lettere e nomi decorativi</span><span class="option-icon check"></span></button>
+          <button type="button" class="option"><span class="option-emoji">💐</span><span class="option-label">Fiori e bouquet decorativi</span><span class="option-icon check"></span></button>
+          <button type="button" class="option"><span class="option-emoji">💌</span><span class="option-label">Biglietti d'auguri e partecipazioni</span><span class="option-icon check"></span></button>
+          <button type="button" class="option"><span class="option-emoji">📿</span><span class="option-label">Bijoux e accessori</span><span class="option-icon check"></span></button>
+          <button type="button" class="option"><span class="option-emoji">🔑</span><span class="option-label">Portachiavi</span><span class="option-icon check"></span></button>
+          <button type="button" class="option"><span class="option-emoji">🎁</span><span class="option-label">Bomboniere e segnaposto</span><span class="option-icon check"></span></button>
+          <button type="button" class="option"><span class="option-emoji">🎨</span><span class="option-label">Altro</span><span class="option-icon check"></span></button>
+          <button type="button" class="option"><span class="option-emoji">🤩</span><span class="option-label">Tutti!</span><span class="option-icon check"></span></button>
+        </div>
+      </div>
+      <div class="text"><p class="small">Personalizziamo il tuo pacchetto in base alle tue risposte.</p></div>
+      <div class="btn-wrap pulse">
+        <button type="button" class="btn" data-next data-requires="estilo">Continua</button>
+      </div>
+    </section>
+
+    <!-- ============ ETAPA 08 ============ -->
+    <section class="step" data-step="8">
+      <div class="text">
+        <h2>Ma serve esperienza con i <span class="theme">lavori manuali</span>?</h2>
+      </div>
+
+      <div class="image" style="aspect-ratio: 474 / 632;">
+        <img src="assets/moldes.webp" alt="Lavoro in Quilling realizzato sopra uno schema" width="474" height="632" loading="lazy">
+      </div>
+
+      <div class="text">
+        <h2><span class="hl">No</span></h2>
+        <p>Il metodo che insegno, quello degli Schemi, è semplice e veloce. Con poche strisce di carta, in poche ore riesci già a creare lavori bellissimi semplicemente <strong>modellando e incollando la carta sullo schema: è così facile che ci riesce chiunque, </strong>anche chi non ha mai fatto niente di simile.</p>
+        <p>Tutti i lavori del corso seguono lo stesso procedimento e, seguendo il passo passo, realizzerai i tuoi pezzi di <strong>Quilling con facilità.</strong></p>
+      </div>
+
+      <div class="space-1"></div>
+
+      <div class="btn-wrap pulse success">
+        <button type="button" class="btn" data-next>Voglio imparare con il metodo</button>
+      </div>
+    </section>
+
+    <!-- ============ ETAPA 09 ============ -->
+    <section class="step" data-step="9">
+      <div class="text">
+        <h2>Il <span class="theme">materiale </span>costa caro?</h2>
+        <p><strong>Per niente!</strong> Su Amazon un kit completo, con 900 strisce e 10 attrezzi, costa<strong> meno di 30 €. </strong>E il bello è che con 900 strisce si realizzano circa <strong>90 pezzi</strong>: vuol dire che ogni creazione ti costa più o meno <strong class="green">0,30 €</strong>. E un quadretto, una bomboniera o un biglietto fatto a mano vale molto, molto di più. Insomma, è un'arte che si comincia con una spesa minima e che ha un grande potenziale, anche se un giorno vorrai vendere le tue creazioni.</p>
+      </div>
+
+      <div class="image" style="aspect-ratio: 1220 / 724;">
+        <img src="assets/kit.webp" alt="Kit per quilling con 900 strisce di carta colorate e 10 attrezzi" width="1220" height="724" loading="lazy">
+      </div>
+
+      <div class="text">
+        <p>È senza dubbio una delle arti manuali <strong>più economiche in assoluto:</strong> puoi creare tantissimo spendendo pochissimo!</p>
+      </div>
+
+      <div class="btn-wrap pulse success">
+        <button type="button" class="btn" data-next>Continua</button>
+      </div>
+    </section>
+
+    <!-- ============ ETAPA 10 ============ -->
+    <section class="step" data-step="10">
+      <div class="text">
+        <h2>Guarda cosa scrivono le mie allieve del corso</h2>
+        <h2><span class="hl">Universo del Quilling!</span></h2>
+      </div>
+
+      <div class="image" style="aspect-ratio: 500 / 538;">
+        <img src="assets/whatsaoo.png" alt="Messaggi WhatsApp delle allieve" width="500" height="538" loading="lazy">
+      </div>
+
+      <div class="space-1"></div>
+
+      <div class="btn-wrap pulse success bubble">
+        <button type="button" class="btn" data-next>Voglio imparare!</button>
+      </div>
+    </section>
+
+    <!-- ============ ETAPA 11 — CARREGANDO ============ -->
+    <section class="step" data-step="11" data-loading="7">
+      <div class="text">
+        <h2>Sei a pochi passi da un <span class="theme">GRANDE </span><span class="hl">cambiamento</span>!</h2>
+      </div>
+
+      <div class="space-1"></div>
+
+      <div class="loading">
+        <div class="loading-bar-wrap">
+          <div class="loading-head">
+            <div>Stiamo preparando il tuo corso</div>
+            <div id="loadingPercent">0%</div>
+          </div>
+          <div class="loading-bar"><div class="loading-fill" id="loadingFill"></div></div>
+        </div>
+        <div class="loading-desc"><p>Stiamo creando un percorso su misura per te</p></div>
+      </div>
+    </section>
+
+    <!-- ============ ETAPA 12 — OFERTA ============ -->
+    <section class="step" data-step="12">
+      <div class="alert alert-success">
+        <div class="alert-body">
+          <h2><span class="hl-green">Complimenti!</span> </h2>
+          <p class="center"><strong>Hai tutti i requisiti per partecipare al corso </strong><strong class="theme">UNIVERSO DEL QUILLING</strong></p>
+        </div>
+      </div>
+
+      <div class="space-1"></div>
+
+      <div class="alert alert-light">
+        <div class="alert-body">
+          <h3>Ecco tutto quello a cui avrai accesso nel corso</h3>
+          <h3><span class="hl">Universo del Quilling</span></h3>
+          <p>✅<strong> Accesso a vita</strong>: guardalo tutte le volte che vuoi</p>
+          <p>✅ <strong>Videolezioni in italiano</strong> che ti spiegano passo passo tutto quello che ti serve per imparare il Quilling</p>
+          <p>✅ <strong>Impara </strong>a realizzare quadretti decorativi e sacri, fiori, biglietti d'auguri e partecipazioni personalizzate, portachiavi, bijoux, bomboniere e molto altro!</p>
+          <p>✅ Come proporre e <strong>vendere i tuoi primi lavori</strong>, partendo anche da amiche e parenti</p>
+          <p>✅ <strong>Dove vendere </strong>le tue creazioni: online (Etsy, Facebook Marketplace) e ai mercatini</p>
+          <p>✅ Come <strong>farti conoscere e vendere</strong> sui social</p>
+          <p>✅ Come <strong>calcolare il prezzo giusto </strong>di ogni pezzo, coprendo materiali e tempo, senza svenderti</p>
+          <p>✅Come <strong>organizzare la produzione</strong> per riuscire a seguire più ordini</p>
+          <p>✅ <strong>Il metodo </strong>per trasformare le tue creazioni in <strong class="green">un'entrata extra</strong>, con i tuoi tempi</p>
+          <p>✅<strong> Idee e ispirazioni</strong> bellissime per Natale, Pasqua, Festa della Mamma, battesimi, comunioni e matrimoni</p>
+        </div>
+      </div>
+
+      <div class="space-1"></div>
+
+      <div class="text">
+        <h2>Guarda alcuni dei <span class="theme">tanti lavori</span> che inizierai a realizzare:</h2>
+      </div>
+
+      <div class="slider carousel" data-slider="carousel" data-autoplay="2000">
+        <div class="slider-viewport">
+          <div class="slider-track">
+            <div class="slide"><div class="carousel-item"><img src="assets/peca-01.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy"></div></div>
+            <div class="slide"><div class="carousel-item"><img src="assets/peca-02.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy"></div></div>
+            <div class="slide"><div class="carousel-item"><img src="assets/peca-03.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy"></div></div>
+            <div class="slide"><div class="carousel-item"><img src="assets/peca-04.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy"></div></div>
+            <div class="slide"><div class="carousel-item"><img src="assets/peca-05.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy"></div></div>
+            <div class="slide"><div class="carousel-item"><img src="assets/peca-06.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy"></div></div>
+            <div class="slide"><div class="carousel-item"><img src="assets/peca-07.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy"></div></div>
+            <div class="slide"><div class="carousel-item"><img src="assets/peca-08.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy"></div></div>
+            <div class="slide"><div class="carousel-item"><img src="assets/peca-09.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy"></div></div>
+            <div class="slide"><div class="carousel-item"><img src="assets/peca-10.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy"></div></div>
+          </div>
+        </div>
+        <div class="slider-dots"><div class="slider-dots-track"></div></div>
+      </div>
+
+      <div class="space-1"></div>
+
+      <div class="text">
+        <h2>🎁 <span class="theme">Ricevi 4 BONUS in regalo se ti assicuri il tuo posto ADESSO:</span></h2>
+        <h3></h3>
+        <p><span class="tag-green">🎁 <strong>BONUS 1 </strong></span><strong>– </strong><strong>Calcolatore dei prezzi </strong>per sapere quanto chiedere per ogni pezzo, coprire materiali e tempo e non svenderti mai.</p>
+        <p class="blank"></p>
+        <p><span class="tag-green">🎁 <strong>BONUS 2 </strong></span><strong>– Assistenza intelligente 24 ore su 24, in italiano</strong>: qualcuno che ti prende per mano, risponde a tutti i tuoi dubbi e ti guida in tutto quello che ti serve.</p>
+        <p><span class="tag-green">🎁 <strong>BONUS 3 </strong></span><strong>– Elenco dei fornitori </strong>per sapere dove comprare in tutta sicurezza, spendendo meno e con la migliore qualità</p>
+        <p><span class="tag-green">🎁 <strong>BONUS 4 </strong></span><strong>– 50 schemi pronti da stampare </strong>per iniziare subito a esercitarti, pensati per farti imparare le tecniche con la pratica</p>
+      </div>
+
+      <div class="space-2"></div>
+
+      <div class="price" id="price">
+        <div class="price-featured">NESSUN ABBONAMENTO - NESSUN COSTO NASCOSTO</div>
+        <div class="price-row">
+          <div class="price-title"><h3><span class="theme">Universo del Quilling</span></h3></div>
+          <div class="price-box">
+            <div class="price-before">invece di 97,00 €, oggi a:</div>
+            <div class="price-value">3x 9,00 <span>€</span></div>
+            <div class="price-after">oppure 27,00 € in un'unica soluzione</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-2"></div>
+
+      <div class="text">
+        <p class="center"><strong>Con meno di </strong><strong class="green">1 € al giorno</strong><strong> (meno di un caffè al bar)</strong>, hai accesso a un metodo completo, a un'app personalizzata in base alle tue risposte e all'assistenza per iniziare a creare (e, se vuoi, a vendere) con il Quilling</p>
+      </div>
+
+      <div class="space-1"></div>
+
+      <div class="image" style="aspect-ratio: 1024 / 307;">
+        <img src="assets/garanzia.webp" alt="Garanzia di 14 giorni — prova senza impegno, rimborso completo" width="1024" height="307" loading="lazy">
+      </div>
+
+      <div class="space-1"></div>
+
+      <div class="image" style="aspect-ratio: 700 / 100;">
+        <img src="assets/pagamenti.png" alt="Acquisto 100% sicuro — Mastercard, Visa, American Express, PayPal, Klarna" width="700" height="100" loading="lazy">
+      </div>
+
+      <div class="space-1"></div>
+
+      <div class="alert alert-danger">
+        <div class="alert-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+        </div>
+        <div class="alert-body">
+          <p><strong>Affrettati!</strong> Prezzo di lancio e 4 bonus validi solo per le prossime 8 iscrizioni</p>
+        </div>
+      </div>
+
+      <div class="space-1"></div>
+
+      <div class="image" style="aspect-ratio: 1 / 1;">
+        <img src="assets/larissa.webp" alt="Larissa Nakamura" width="900" height="900" loading="lazy">
+      </div>
+
+      <div class="text">
+        <h3>Larissa Nakamura –</h3>
+        <h3>Creatrice del corso <span class="hl">Universo del</span></h3>
+        <h3><span class="hl">Quilling</span><span class="w700">, esperta in creazioni di Quilling che incantano e si vendono dal 2018.</span></h3>
+        <p class="center">Creatrice del corso <strong>Universo del Quilling</strong> e appassionata di lavori manuali dal 2017.</p>
+        <p class="center">La mia storia è iniziata in modo semplice: guardavo mia mamma lavorare all'uncinetto, mi piaceva, ma lo trovavo difficilissimo. Poi ho scoperto la tecnica del Quilling, molto più facile e capace di dare vita a pezzi stupendi: me ne sono innamorata e ho iniziato a realizzare <strong>decorazioni, quadretti, bomboniere, biglietti e partecipazioni personalizzate.</strong> ✨</p>
+        <p class="center">Mi sono specializzata nelle rifiniture, negli abbinamenti di colore e nelle strategie di vendita, e oggi vivo di ciò che amo: creare lavori artigianali belli, raffinati e che durano nel tempo.</p>
+        <p class="center">Oggi ho già accompagnato <strong>oltre 3.000 allieve</strong> alla scoperta del Quilling. Voglio mostrarti che anche tu puoi trasformare la tua passione per i<strong> lavori manuali </strong>in <strong>qualcosa di tutto tuo, che può anche diventare un'entrata in più!</strong></p>
+        <p class="blank"></p>
+      </div>
+
+      <div class="space-1"></div>
+
+      <div class="text">
+        <h3>Guarda cosa dicono del corso le allieve della <span class="theme">prima edizione</span>:</h3>
+      </div>
+
+      <div class="slider quotes" data-slider="quotes">
+        <div class="slider-track">
+          <div class="slide">
+            <div class="quote">
+              <img class="quote-avatar" src="assets/dep-ivanilde.webp" alt="" width="40" height="40" loading="lazy">
+              <div>
+                <div class="stars" aria-label="5 stelle"></div>
+                <div class="quote-name">Rosanna Galli · Bergamo</div>
+                <div class="quote-text">Non avevo mai fatto Quilling e pensavo fosse difficilissimo. Seguendo il passo passo dell'app, ho finito il mio primo lavoro al terzo giorno. Non so se è merito dell'app personalizzata o di Larissa che nei video fa vedere ogni minimo dettaglio</div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="quote">
+              <img class="quote-avatar" src="assets/dep-marcela.webp" alt="" width="40" height="40" loading="lazy">
+              <div>
+                <div class="stars" aria-label="5 stelle"></div>
+                <div class="quote-name">Marta Colombo · Monza</div>
+                <div class="quote-text">Il metodo degli schemi semplifica tantissimo. Niente confusione, niente informazioni sparse qua e là. Pensavo di perdermi, ma con il modo in cui Larissa spiega nelle videolezioni è tutto molto più facile. Mi è piaciuto da matti! Lo consiglio a tutte le mie amiche!</div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="quote">
+              <img class="quote-avatar" src="assets/dep-lucimara.webp" alt="" width="40" height="40" loading="lazy">
+              <div>
+                <div class="stars" aria-label="5 stelle"></div>
+                <div class="quote-name">Loredana Marino · Bari</div>
+                <div class="quote-text">Ho venduto il mio primo pezzo dopo 9 giorni, sono al settimo cielo!!! Ho fatto 2 quadretti: il primo l'ho tenuto per me e il secondo l'ho venduto. Ed è stato facilissimo, proprio come diceva Larissa: basta fare il primo lavoro. L'ho pubblicato su Instagram e mi sono piovute addosso le richieste, roba da non credere!</div>
+              </div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="quote">
+              <img class="quote-avatar" src="assets/dep-luana.webp" alt="" width="40" height="40" loading="lazy">
+              <div>
+                <div class="stars" aria-label="5 stelle"></div>
+                <div class="quote-name">Laura Conti · Firenze</div>
+                <div class="quote-text">Quello che mi è piaciuto di più è che Larissa va dritta al punto. Niente giri di parole: nelle videolezioni ti fa vedere ogni passaggio, e tanti lavori li impari semplicemente guardando il video, lei li fa e tu la segui. Davvero, semplicissimo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-1"></div>
+
+      <div class="text">
+        <h2><span class="hl w700">Domande frequenti</span></h2>
+      </div>
+
+      <div class="faq">
+        <div class="faq-item open">
+          <button type="button" class="faq-question"><span>L'accesso è a vita?</span><i class="faq-icon"></i></button>
+          <div class="faq-answer"><div><div class="faq-answer-inner">
+            <p><strong>Sì. </strong>Con l'acquisto di <em>Universo del Quilling</em>, l'accesso è <strong>a vita</strong>, senza abbonamenti e senza addebiti futuri. Puoi guardare le lezioni quando vuoi, con i tuoi tempi e per sempre!</p>
+          </div></div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-question"><span>Le spiegazioni dei lavori sono scritte o in video?</span><i class="faq-icon"></i></button>
+          <div class="faq-answer"><div><div class="faq-answer-inner">
+            <p>Tutto il passo passo lo imparerai con videolezioni in italiano, dall'inizio alla fine. Così chiunque può riuscirci, anche chi non ha mai fatto quilling prima!</p>
+          </div></div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-question"><span>Come ricevo l'accesso?</span><i class="faq-icon"></i></button>
+          <div class="faq-answer"><div><div class="faq-answer-inner">
+            <p>L'accesso viene <strong>attivato subito dopo l'acquisto</strong>. Lo riceverai all'indirizzo email che hai usato per acquistare.</p>
+            <p>Ricordati di controllare anche le cartelle Spam e Promozioni.</p>
+          </div></div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-question"><span>Serve esperienza con il Quilling per iniziare?</span><i class="faq-icon"></i></button>
+          <div class="faq-answer"><div><div class="faq-answer-inner">
+            <p><strong>No. </strong>Il metodo è stato creato per <strong>principianti assolute</strong>. Si parte dagli <strong>Schemi</strong>, seguendo un passo passo semplice in videolezioni, anche se non hai mai fatto Quilling: ti basta fare esattamente quello che vedi nei video.</p>
+          </div></div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-question"><span>Quanto tempo al giorno devo dedicarci?</span><i class="faq-icon"></i></button>
+          <div class="faq-answer"><div><div class="faq-answer-inner">
+            <p>Il percorso si adatta al tempo che hai a disposizione. Con <strong>20-30 minuti al giorno</strong> puoi già seguire le lezioni e iniziare a creare i tuoi lavori in Quilling. Vai al tuo ritmo, senza pressioni.</p>
+          </div></div></div>
+        </div>
+        <div class="faq-item">
+          <button type="button" class="faq-question"><span>C'è una garanzia?</span><i class="faq-icon"></i></button>
+          <div class="faq-answer"><div><div class="faq-answer-inner">
+            <p>Sì. Hai <strong>14 giorni di garanzia "soddisfatta o rimborsata"</strong>, lo stesso periodo previsto per il diritto di recesso sugli acquisti online. Se il corso non ti piace, ti basta chiedere il rimborso entro 14 giorni dall'acquisto e ti restituiamo il 100% di quanto hai pagato, senza burocrazia.</p>
+          </div></div></div>
+        </div>
+      </div>
+
+      <!-- Botão fixo: aparece quando o bloco de preço entra na tela -->
+      <div class="fixed-cta" id="fixedCta" hidden>
+        <div class="fixed-cta-inner">
+          <div class="btn-wrap pulse success">
+            <a class="btn" id="checkoutLink" href="https://pay.kirvano.com/10a8d021-3c99-4269-b2a0-eef6e73ac515" target="_blank" rel="noopener">Clicca qui e assicurati il tuo posto adesso!</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <div class="quiz-footer-space"></div>
+</main>
+
+<script src="js/script.js"></script>
+
+<!-- UTMify: UTMs -->
+<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+
+</body>
+</html>

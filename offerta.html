@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7a2fd6">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Sconto Speciale – Universo del Quilling</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --background: oklch(99% .005 300);
+      --foreground: oklch(22% .03 300);
+      --card: #fff;
+      --primary: oklch(52% .24 300);
+      --primary-glow: oklch(62% .22 320);
+      --primary-foreground: oklch(99% .005 300);
+      --secondary-foreground: oklch(35% .14 300);
+      --muted-foreground: oklch(50% .04 300);
+      --accent: oklch(95% .04 305);
+      --accent-foreground: oklch(40% .18 300);
+      --warning: oklch(20% .02 300);
+      --warning-foreground: oklch(85% .16 85);
+      --border: oklch(91% .02 300);
+      --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-glow));
+      --shadow-card: 0 10px 30px -18px color-mix(in oklab, var(--primary) 45%, transparent);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      min-height: 100vh;
+      padding-bottom: 64px;
+      background: var(--background);
+      color: var(--foreground);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+      line-height: 1.5;
+    }
+    img { display: block; max-width: 100%; }
+
+    .top { padding: 20px; text-align: center; color: var(--primary-foreground); background-image: var(--gradient-primary); }
+    .top h1 { font-size: 18px; font-weight: 800; text-transform: uppercase; line-height: 1.35; letter-spacing: -.01em; }
+
+    .warn { padding: 16px 20px; text-align: center; background: var(--warning); }
+    .warn p { color: var(--warning-foreground); font-size: 14px; font-weight: 700; text-transform: uppercase; line-height: 1.35; }
+
+    .wrap { width: 100%; max-width: 512px; margin: 0 auto; padding: 0 20px; }
+
+    .title { margin-top: 32px; text-align: center; font-size: 20px; font-weight: 800; color: var(--primary); line-height: 1.3; }
+    .subtitle { margin-top: 40px; text-align: center; font-size: 20px; font-weight: 800; text-transform: uppercase; line-height: 1.3; }
+
+    .card { margin-top: 20px; padding: 20px; text-align: center; background: var(--card); border: 1px solid var(--border); border-radius: 16px; box-shadow: var(--shadow-card); }
+    .card p { font-size: 15px; line-height: 1.65; color: var(--secondary-foreground); }
+    .card strong { font-weight: 800; }
+
+    .carousel { margin-top: 20px; }
+    .carousel-viewport { overflow: hidden; border-radius: 12px; touch-action: pan-y; }
+    .carousel-track { display: flex; transition: transform .7s ease-out; }
+    .carousel-track img { flex: 0 0 100%; width: 100%; min-width: 100%; max-width: none; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+    .dots { display: flex; justify-content: center; gap: 8px; margin-top: 16px; }
+    .dots button { width: 10px; height: 10px; border: 0; border-radius: 999px; background: color-mix(in oklab, var(--primary) 25%, transparent); cursor: pointer; transition: all .3s; }
+    .dots button.on { width: 24px; background: var(--primary); }
+
+    .box { margin-top: 32px; padding: 24px 20px; text-align: center; background: var(--accent); border-radius: 16px; }
+    .box p { font-size: 15px; color: var(--accent-foreground); }
+    .box p.strong { margin-top: 12px; font-weight: 800; text-transform: uppercase; line-height: 1.35; color: var(--primary); }
+
+    .price { margin-top: 32px; padding: 32px 20px; text-align: center; background: var(--card); border: 2px solid var(--primary); border-radius: 16px; box-shadow: var(--shadow-card); }
+    .price-old { font-size: 18px; color: var(--muted-foreground); text-decoration: line-through; }
+    .price-label { margin-top: 8px; font-size: 14px; color: var(--muted-foreground); }
+    .price-new { margin-top: 4px; font-size: 48px; font-weight: 800; letter-spacing: -.02em; line-height: 1.1; color: var(--primary); }
+    .price-tag { display: inline-block; margin-top: 16px; padding: 6px 16px; border-radius: 999px; background: var(--accent); color: var(--accent-foreground); font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+
+    .hint { margin-top: 32px; text-align: center; font-size: 14px; font-weight: 700; text-transform: uppercase; line-height: 1.35; color: var(--primary); }
+
+    .cta {
+      display: block; width: 100%; margin-top: 16px; padding: 20px 16px;
+      border-radius: 16px; background-image: var(--gradient-primary);
+      color: var(--primary-foreground); text-align: center; text-decoration: none;
+      font-size: 18px; font-weight: 800; text-transform: uppercase; line-height: 1.25;
+      box-shadow: 0 12px 30px -12px var(--primary);
+      animation: pulse 1.6s ease-in-out infinite;
+    }
+    @keyframes pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03); } }
+    @media (prefers-reduced-motion: reduce) { .cta { animation: none; } .carousel-track { transition: none; } }
+
+    .trust { margin-top: 24px; text-align: center; font-size: 12px; line-height: 1.65; color: var(--muted-foreground); }
+
+    @media (min-width: 640px) {
+      .top h1 { font-size: 20px; }
+    }
+  </style>
+
+  <!-- UTMify: pixel -->
+  <script>
+    window.pixelId = "6a625a33e8670549128c4fbb";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("defer", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  </script>
+</head>
+<body>
+
+  <header class="top">
+    <h1>🎉 Sei stata selezionata per ricevere uno sconto speciale!</h1>
+  </header>
+
+  <div class="warn">
+    <p>⚠️ Se chiudi questa pagina, questa offerta non ti verrà mai più proposta!</p>
+  </div>
+
+  <main class="wrap">
+
+    <h2 class="title">Sconto speciale su Universo del Quilling</h2>
+
+    <div class="card">
+      <p>Non voglio rinunciare a te, perché conosco il <strong>POTERE</strong> di questo corso e so quanto può cambiarti la vita! Per questo ti sto offrendo un <strong>SUPER SCONTO</strong>, così puoi diventare mia allieva e iniziare a creare i tuoi lavori in Quilling già questa settimana!</p>
+    </div>
+
+    <h2 class="subtitle">Guarda alcuni dei lavori che imparerai a realizzare!</h2>
+
+    <div class="carousel" id="carousel">
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+          <img src="assets/peca-01.webp" alt="Creazione in Quilling" width="540" height="675">
+          <img src="assets/peca-02.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy">
+          <img src="assets/peca-03.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy">
+          <img src="assets/peca-04.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy">
+          <img src="assets/peca-05.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy">
+          <img src="assets/peca-06.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy">
+          <img src="assets/peca-07.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy">
+          <img src="assets/peca-08.webp" alt="Creazione in Quilling" width="540" height="675" loading="lazy">
+        </div>
+      </div>
+      <div class="dots"></div>
+    </div>
+
+    <div class="box">
+      <p>Allora clicca sul pulsante qui sotto e approfitta di questa occasione.</p>
+      <p class="strong">Non faccio questa offerta a chiunque! Sei stata selezionata!</p>
+    </div>
+
+    <div class="price">
+      <p class="price-old">invece di 27,00 €</p>
+      <p class="price-label">a soli</p>
+      <p class="price-new">10,00 €</p>
+      <span class="price-tag">Occasione esclusiva</span>
+    </div>
+
+    <p class="hint">⬇️ Clicca sul pulsante qui sotto e assicurati l'accesso ⬇️</p>
+
+    <!-- TROCAR pelo link do checkout da oferta de 10 € -->
+    <a class="cta" id="checkoutLink" href="#LINK-CHECKOUT-10-EURO" target="_blank" rel="noopener">🎉 Sì, voglio approfittare dello sconto!</a>
+
+    <p class="trust">🔒 Pagamento sicuro al 100% — Accesso immediato dopo la conferma — Garanzia di 14 giorni soddisfatta o rimborsata</p>
+
+  </main>
+
+  <script>
+    (function () {
+      "use strict";
+
+      // carrossel
+      var root = document.getElementById("carousel");
+      var track = root.querySelector(".carousel-track");
+      var dotsWrap = root.querySelector(".dots");
+      var count = track.children.length;
+      var index = 0;
+      var timer = null;
+      var dots = [];
+
+      for (var i = 0; i < count; i++) {
+        var dot = document.createElement("button");
+        dot.type = "button";
+        dot.setAttribute("aria-label", "Foto " + (i + 1));
+        dot.addEventListener("click", (function (n) { return function () { go(n); play(); }; })(i));
+        dotsWrap.appendChild(dot);
+        dots.push(dot);
+      }
+
+      function go(n) {
+        index = (n + count) % count;
+        track.style.transform = "translateX(" + (-index * 100) + "%)";
+        dots.forEach(function (d, i) { d.className = i === index ? "on" : ""; });
+      }
+
+      function play() {
+        if (timer) clearInterval(timer);
+        timer = setInterval(function () { go(index + 1); }, 3000);
+      }
+
+      var startX = null;
+      root.addEventListener("touchstart", function (e) { startX = e.touches[0].clientX; }, { passive: true });
+      root.addEventListener("touchend", function (e) {
+        if (startX === null) return;
+        var dx = e.changedTouches[0].clientX - startX;
+        if (Math.abs(dx) > 40) { go(index + (dx < 0 ? 1 : -1)); play(); }
+        startX = null;
+      });
+
+      go(0);
+      play();
+
+      // repassa os parâmetros da URL (UTMs) para o checkout
+      var checkout = document.getElementById("checkoutLink");
+      checkout.addEventListener("click", function () {
+        var query = window.location.search.replace("?", "");
+        if (query && checkout.href.indexOf("utm_") === -1 && checkout.href.indexOf(query) === -1) {
+          checkout.href += (checkout.href.indexOf("?") > -1 ? "&" : "?") + query;
+        }
+      });
+    })();
+  </script>
+
+  <!-- UTMify: UTMs -->
+  <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+
+</body>
+</html>
