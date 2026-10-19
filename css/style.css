@@ -482,6 +482,23 @@ h1 strong, h2 strong, h3 strong { font-weight: 900; }
 
 .fixed-cta-inner { max-width: var(--max); margin: 0 auto; }
 
+.price-value {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+}
+
+.vat-tag {
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  margin-left: 2px;
+}
+
 /* ---------- Desktop ---------- */
 
 @media (min-width: 768px) {
