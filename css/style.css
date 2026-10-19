@@ -499,6 +499,109 @@ h1 strong, h2 strong, h3 strong { font-weight: 900; }
   margin-left: 2px;
 }
 
+/* Card Container */
+.price-card {
+  border: 2px solid #8a2be2; /* Roxo principal da sua marca */
+  border-radius: 16px;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(138, 43, 226, 0.15);
+  max-width: 400px;
+  margin: 20px auto;
+  text-align: center;
+  font-family: inherit;
+}
+
+/* Header Roxo */
+.price-header {
+  background: #8a2be2;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 8px 12px;
+  text-transform: uppercase;
+}
+
+/* Corpo do Card */
+.price-body {
+  padding: 20px 16px;
+}
+
+.product-title {
+  color: #8a2be2;
+  font-size: 20px;
+  font-weight: 800;
+  margin: 0 0 8px 0;
+}
+
+/* Preço Antigo (Ancoragem de Preço) */
+.price-old {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.price-old s {
+  color: #d9534f;
+  font-weight: 600;
+}
+
+/* O GRANDE DESTAQUE DO PREÇO */
+.price-main {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+  margin: 10px 0;
+  background: #f4efff; /* Fundo roxo ultra claro para dar destaque limpo */
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px dashed #8a2be2;
+}
+
+.price-installments {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.price-amount {
+  font-size: 42px; /* Fonte bem grande e impactante */
+  font-weight: 900;
+  color: #27ae60; /* Verde: passa sensação positiva de oportunidade/economia */
+  line-height: 1;
+}
+
+.price-vat {
+  font-size: 12px;
+  font-weight: 700;
+  color: #666;
+  background: #e0e0e0;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Opção em Parcela Única */
+.price-single {
+  font-size: 13px;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* Badge de Economia Positiva */
+.price-badge-saving {
+  display: inline-block;
+  margin-top: 12px;
+  background: #27ae60;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
 /* ---------- Desktop ---------- */
 
 @media (min-width: 768px) {
