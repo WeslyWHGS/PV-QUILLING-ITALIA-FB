@@ -47,6 +47,8 @@
     initSliders(step);
     if (step.hasAttribute("data-loading")) startLoading(step);
     if (step.querySelector("#fixedCta")) watchFixedCta();
+    // o back redirect só é ativado quando a pessoa chega na oferta (última etapa)
+    if (step === steps[steps.length - 1] && BACK_REDIRECT_LINK) setBackRedirect(BACK_REDIRECT_LINK);
   }
 
   /* ---------- Botões "continuar" ---------- */
@@ -272,7 +274,12 @@
 
   /* ---------- Back redirect ---------- */
 
+  var backRedirectSet = false;
+
   function setBackRedirect(url) {
+    if (backRedirectSet) return;
+    backRedirectSet = true;
+
     var target = url.trim() + (url.indexOf("?") > 0 ? "&" : "?") + document.location.search.replace("?", "").toString();
 
     history.pushState({}, "", location.href);
@@ -285,8 +292,6 @@
       }, 1);
     });
   }
-
-  if (BACK_REDIRECT_LINK) setBackRedirect(BACK_REDIRECT_LINK);
 
   /* ---------- Início ---------- */
 
