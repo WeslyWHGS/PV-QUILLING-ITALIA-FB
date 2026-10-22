@@ -11,6 +11,43 @@
   var current = 0;
   var answers = {};
 
+  /* ---------- Rastreamento do funil (Planilha Google, ver js/funil.js) ---------- */
+
+  // nome de cada etapa, na ordem do quiz (data-step 1 a 12)
+  var STEP_NAMES = {
+    1: "capa",
+    2: "experiencia",
+    3: "primeiro_curso",
+    4: "tempo",
+    5: "desejo",
+    6: "meta",
+    7: "estilo",
+    8: "metodo",
+    9: "material",
+    10: "depoimentos",
+    11: "carregando",
+    12: "oferta"
+  };
+
+  function track(name) {
+    if (window.trackEvent) window.trackEvent(name);
+  }
+
+  function tag(key, value) {
+    if (window.trackTag) window.trackTag(key, value);
+  }
+
+  var trackedSteps = {};
+
+  function trackStep(step) {
+    var n = parseInt(step.getAttribute("data-step"), 10);
+    if (trackedSteps[n]) return;
+    trackedSteps[n] = true;
+    var num = n < 10 ? "0" + n : "" + n;
+    track("etapa_" + num + "_" + (STEP_NAMES[n] || "sem_nome"));
+    tag("etapa_max", num);
+  }
+
   /* ---------- Navegação entre etapas ---------- */
 
   function showStep(index) {
@@ -44,6 +81,7 @@
   }
 
   function onEnter(step) {
+    trackStep(step);
     initSliders(step);
     if (step.hasAttribute("data-loading")) startLoading(step);
     if (step.querySelector("#fixedCta")) watchFixedCta();
@@ -57,6 +95,7 @@
     btn.addEventListener("click", function () {
       var required = btn.getAttribute("data-requires");
       if (required && !(answers[required] && answers[required].length)) return;
+      if (required) tag(required, answers[required].join(" | "));
       nextStep();
     });
   });
@@ -85,6 +124,7 @@
         group.querySelectorAll(".option.active").forEach(function (el) { el.classList.remove("active"); });
         option.classList.add("active");
         answers[name] = [label];
+        tag(name, label);
         setTimeout(function () {
           locked = false;
           nextStep();
@@ -255,6 +295,7 @@
     var observer = new IntersectionObserver(function (entries) {
       if (entries.some(function (entry) { return entry.isIntersecting; })) {
         cta.hidden = false;
+        track("oferta_viu_preco");
         observer.disconnect();
       }
     });
@@ -265,6 +306,7 @@
   var checkout = document.getElementById("checkoutLink");
   if (checkout) {
     checkout.addEventListener("click", function () {
+      track("oferta_clicou_checkout");
       var query = window.location.search.replace("?", "");
       if (query && checkout.href.indexOf("utm_") === -1 && checkout.href.indexOf(query) === -1) {
         checkout.href += (checkout.href.indexOf("?") > -1 ? "&" : "?") + query;
@@ -287,6 +329,7 @@
     history.pushState({}, "", location.href);
 
     window.addEventListener("popstate", function () {
+      track("oferta_saiu_back_redirect");
       setTimeout(function () {
         location.href = target;
       }, 1);
