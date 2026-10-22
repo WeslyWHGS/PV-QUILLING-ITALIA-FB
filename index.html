@@ -2,6 +2,39 @@
 <html lang="it">
 <head>
   <meta charset="utf-8">
+
+  <!-- ============ TESTE A/B: divide os visitantes entre Quiz e PV (deve vir antes de tudo) ============ -->
+  <script>
+    (function () {
+      // porcentagem de visitantes enviados para a PV (0.5 = metade). Use 0 para desligar o teste.
+      var PV_SHARE = 0.5;
+      var PV_URL = "pv.html";
+      var KEY = "ab_variante";
+
+      // ?v=quiz ou ?v=pv força uma versão (útil para testar)
+      var forced = (location.search.match(/[?&]v=(quiz|pv)(&|$)/) || [])[1];
+      var variant = forced;
+
+      try {
+        if (!variant) variant = localStorage.getItem(KEY);
+        if (variant !== "quiz" && variant !== "pv") variant = Math.random() < PV_SHARE ? "pv" : "quiz";
+        localStorage.setItem(KEY, variant);
+      } catch (e) {
+        if (!variant) variant = Math.random() < PV_SHARE ? "pv" : "quiz";
+      }
+
+      // teste desligado: todo mundo fica no quiz (a não ser que force com ?v=pv)
+      if (PV_SHARE <= 0 && !forced) return;
+      if (variant !== "pv") return;
+
+      // vai para a PV levando as UTMs, sem mostrar o quiz nem disparar pixel/funil aqui
+      window.AB_REDIRECTING = true;
+      document.documentElement.style.display = "none";
+      location.replace(PV_URL + location.search + location.hash);
+      if (window.stop) window.stop();
+    })();
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="theme-color" content="#ffffff">
   <title>Universo del Quilling</title>
