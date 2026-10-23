@@ -30,8 +30,10 @@
       // vai para a PV levando as UTMs, sem mostrar o quiz nem disparar pixel/funil aqui
       window.AB_REDIRECTING = true;
       document.documentElement.style.display = "none";
-      location.replace(PV_URL + location.search + location.hash);
+      // ATENÇÃO: window.stop() precisa vir ANTES do redirecionamento.
+      // Chamado depois, ele cancela a ida para a PV e a página fica em branco.
       if (window.stop) window.stop();
+      location.replace(PV_URL + location.search + location.hash);
     })();
   </script>
 
