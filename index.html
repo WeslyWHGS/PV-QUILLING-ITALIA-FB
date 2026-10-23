@@ -542,6 +542,17 @@
         });
       });
 
+      /* ---------- Links internos (#offerta): rolam a página sem criar entrada no histórico ---------- */
+
+      document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+        a.addEventListener("click", function (e) {
+          var target = document.getElementById(a.getAttribute("href").slice(1));
+          if (!target) return;
+          e.preventDefault();
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+
       /* ---------- Back redirect (ativado quando a pessoa vê o preço) ---------- */
 
       var backRedirectSet = false;
@@ -552,11 +563,14 @@
 
         var target = url.trim() + (url.indexOf("?") > 0 ? "&" : "?") + document.location.search.replace("?", "").toString();
 
-        history.pushState({}, "", location.href);
-        history.pushState({}, "", location.href);
-        history.pushState({}, "", location.href);
+        // as cópias levam uma marca ("br") para separar o "voltar" de verdade
+        // de outras navegações dentro da página (ex.: links para #offerta)
+        history.pushState({ br: 1 }, "", location.href);
+        history.pushState({ br: 1 }, "", location.href);
+        history.pushState({ br: 1 }, "", location.href);
 
-        window.addEventListener("popstate", function () {
+        window.addEventListener("popstate", function (e) {
+          if (!e.state || !e.state.br) return;
           track("pv_saiu_back_redirect");
           setTimeout(function () {
             location.href = target;
